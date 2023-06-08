@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog_2/core/constants/size.dart';
 import 'package:flutter_blog_2/views/components/custom_logo.dart';
 import 'package:flutter_blog_2/views/pages/auth/login_page/components/login_form.dart';
 
@@ -11,7 +12,9 @@ class LoginBody extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: ListView(
         children: [
-          CustomLogo("Blog"),
+          const SizedBox(height: xlargeGap),
+          const CustomLogo("Blog"),
+          const SizedBox(height: largeGap),
           LoginForm(),
         ],
       ),
