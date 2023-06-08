@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog_2/core/constants/move.dart';
 import 'package:flutter_blog_2/core/constants/size.dart';
 import 'package:flutter_blog_2/views/components/custom_logo.dart';
+import 'package:flutter_blog_2/views/components/custom_text_button.dart';
 import 'package:flutter_blog_2/views/pages/auth/login_page/components/login_form.dart';
 
 class LoginBody extends StatelessWidget {
@@ -16,6 +18,12 @@ class LoginBody extends StatelessWidget {
           const CustomLogo("Blog"),
           const SizedBox(height: largeGap),
           LoginForm(),
+          CustomTextButton(
+            "Move To Join",
+                () {
+              Navigator.pushNamed(context, Move.joinPage);
+            },
+          ),
         ],
       ),
     );
