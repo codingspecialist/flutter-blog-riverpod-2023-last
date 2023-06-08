@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog_2/core/constants/move.dart';
 import 'package:flutter_blog_2/core/constants/size.dart';
 import 'package:flutter_blog_2/core/util/validator_util.dart';
 import 'package:flutter_blog_2/views/components/custom_auth_text_form_field.dart';
@@ -33,6 +34,7 @@ class LoginForm extends StatelessWidget {
           TextButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
+                Navigator.popAndPushNamed(context, Move.postListPage);
               }
             },
             child: const Text("Login"),
