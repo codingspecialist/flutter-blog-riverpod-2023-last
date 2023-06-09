@@ -14,6 +14,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: Move.loginPage,
       routes: getRouters(),
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
+          centerTitle: true,
+          backgroundColor: Colors.black12,
+          elevation: 0,
+        ),
+      ),
     );
   }
 }
