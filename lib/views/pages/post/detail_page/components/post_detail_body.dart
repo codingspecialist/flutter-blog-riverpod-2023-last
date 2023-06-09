@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog_2/core/constants/size.dart';
 import 'package:flutter_blog_2/views/pages/post/detail_page/components/post_detail_buttons.dart';
 import 'package:flutter_blog_2/views/pages/post/detail_page/components/post_detail_content.dart';
 import 'package:flutter_blog_2/views/pages/post/detail_page/components/post_detail_profile.dart';
@@ -14,9 +15,11 @@ class PostDetailBody extends StatelessWidget {
       child: ListView(
         children: [
           PostDetailTitle("제목"),
+          const SizedBox(height: largeGap),
           PostDetailProfile(),
           PostDetailButtons(),
           const Divider(),
+          const SizedBox(height: largeGap),
           PostDetailContent("내용"),
         ],
       ),
