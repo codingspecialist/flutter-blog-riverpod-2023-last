@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog_2/core/constants/move.dart';
 import 'package:flutter_blog_2/core/constants/size.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -20,6 +21,8 @@ class CustomNavigation extends ConsumerWidget {
             children: [
               TextButton(
                 onPressed: () {
+                  scaffoldKey.currentState!.openEndDrawer();
+                  Navigator.pushNamed(context, Move.postWritePage);
                 },
                 child: const Text(
                   "글쓰기",
@@ -33,6 +36,7 @@ class CustomNavigation extends ConsumerWidget {
               const Divider(),
               TextButton(
                 onPressed: () {
+                  scaffoldKey.currentState!.openEndDrawer();
                 },
                 child: const Text(
                   "회원정보보기",
@@ -46,6 +50,8 @@ class CustomNavigation extends ConsumerWidget {
               const Divider(),
               TextButton(
                 onPressed: () {
+                  scaffoldKey.currentState!.openEndDrawer();
+                  Navigator.popAndPushNamed(context, Move.loginPage);
                 },
                 child: const Text(
                   "로그아웃",
