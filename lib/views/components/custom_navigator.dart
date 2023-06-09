@@ -37,6 +37,7 @@ class CustomNavigation extends ConsumerWidget {
               TextButton(
                 onPressed: () {
                   scaffoldKey.currentState!.openEndDrawer();
+                  Navigator.pushNamed(context, Move.userInfoPage);
                 },
                 child: const Text(
                   "회원정보보기",
