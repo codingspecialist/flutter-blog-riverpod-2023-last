@@ -13,10 +13,11 @@ class PostDetailBody extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: ListView(
         children: [
-          PostDetailTitle(),
+          PostDetailTitle("제목"),
           PostDetailProfile(),
           PostDetailButtons(),
-          PostDetailContent(),
+          const Divider(),
+          PostDetailContent("내용"),
         ],
       ),
     );
