@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog_2/views/pages/post/detail_page/post_detail_page.dart';
 import 'package:flutter_blog_2/views/pages/post/list_page/components/post_list_item.dart';
 
 class PostListBody extends StatelessWidget {
@@ -11,6 +12,8 @@ class PostListBody extends StatelessWidget {
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => PostDetailPage()));
           },
           child: PostListItem(),
         );
