@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog_2/views/pages/auth/join_page/join_page.dart';
 import 'package:flutter_blog_2/views/pages/auth/login_page/login_page.dart';
-import 'package:flutter_blog_2/views/pages/post/post_list_page/post_list_page.dart';
+import 'package:flutter_blog_2/views/pages/post/list_page/post_list_page.dart';
 
 class Move {
   static String loginPage = "/login";
