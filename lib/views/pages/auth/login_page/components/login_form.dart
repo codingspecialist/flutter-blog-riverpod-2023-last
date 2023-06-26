@@ -35,9 +35,10 @@ class LoginForm extends StatelessWidget {
           CustomElevatedButton(
               text: "로그인",
               funPageRoute: () {
-                if (_formKey.currentState!.validate()) {
-                  Navigator.popAndPushNamed(context, Move.postListPage);
-                }
+                Navigator.popAndPushNamed(context, Move.postListPage);
+                // if (_formKey.currentState!.validate()) {
+                //   Navigator.popAndPushNamed(context, Move.postListPage);
+                // }
               }),
         ],
       ),
