@@ -3,6 +3,7 @@ import 'package:flutter_blog_2/core/constants/move.dart';
 import 'package:flutter_blog_2/core/constants/size.dart';
 import 'package:flutter_blog_2/core/util/validator_util.dart';
 import 'package:flutter_blog_2/views/components/custom_auth_text_form_field.dart';
+import 'package:flutter_blog_2/views/components/custom_elavated_button.dart';
 
 class LoginForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -31,14 +32,13 @@ class LoginForm extends StatelessWidget {
             controller: _password,
           ),
           const SizedBox(height: largeGap),
-          TextButton(
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                Navigator.popAndPushNamed(context, Move.postListPage);
-              }
-            },
-            child: const Text("Login"),
-          ),
+          CustomElevatedButton(
+              text: "로그인",
+              funPageRoute: () {
+                if (_formKey.currentState!.validate()) {
+                  Navigator.popAndPushNamed(context, Move.postListPage);
+                }
+              }),
         ],
       ),
     );

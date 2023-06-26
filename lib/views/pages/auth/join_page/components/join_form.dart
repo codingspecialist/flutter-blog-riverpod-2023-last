@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blog_2/core/constants/size.dart';
 import 'package:flutter_blog_2/core/util/validator_util.dart';
 import 'package:flutter_blog_2/views/components/custom_auth_text_form_field.dart';
+import 'package:flutter_blog_2/views/components/custom_elavated_button.dart';
 
 class JoinForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -38,11 +39,7 @@ class JoinForm extends StatelessWidget {
             controller: _password,
           ),
           const SizedBox(height: largeGap),
-          TextButton(
-            onPressed: () {
-            },
-            child: const Text("Join"),
-          ),
+          CustomElevatedButton(text: "회원가입", funPageRoute: () {}),
         ],
       ),
     );

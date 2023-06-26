@@ -19,8 +19,8 @@ class JoinBody extends StatelessWidget {
           const SizedBox(height: largeGap),
           JoinForm(),
           CustomTextButton(
-            "Move To Login",
-                () {
+            "로그인 페이지로 이동",
+            () {
               Navigator.pushNamed(context, Move.loginPage);
             },
           ),

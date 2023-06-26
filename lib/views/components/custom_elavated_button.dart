@@ -14,7 +14,7 @@ class CustomElevatedButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.white12,
       ),
       onPressed: funPageRoute,
       child: Text("$text"),

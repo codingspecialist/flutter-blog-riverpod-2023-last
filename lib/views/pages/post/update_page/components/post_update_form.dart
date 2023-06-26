@@ -4,9 +4,8 @@ import 'package:flutter_blog_2/core/util/validator_util.dart';
 import 'package:flutter_blog_2/views/components/custom_elavated_button.dart';
 import 'package:flutter_blog_2/views/components/custom_text_area.dart';
 import 'package:flutter_blog_2/views/components/custom_text_form_field.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class PostUpdateForm extends ConsumerWidget {
+class PostUpdateForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final _title = TextEditingController();
   final _content = TextEditingController();
@@ -14,7 +13,7 @@ class PostUpdateForm extends ConsumerWidget {
   PostUpdateForm({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Form(
       key: _formKey,
       child: ListView(

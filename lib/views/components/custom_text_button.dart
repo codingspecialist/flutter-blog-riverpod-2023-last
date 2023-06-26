@@ -10,7 +10,7 @@ class CustomTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: function,
-      child: Text(text),
+      child: Text(text, style: const TextStyle(color: Colors.black87, decoration: TextDecoration.underline)),
     );
   }
 }
