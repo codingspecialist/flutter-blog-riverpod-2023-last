@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog_2/core/constants/move.dart';
-import 'package:flutter_blog_2/core/constants/theme.dart';
+import 'package:flutter_blog_2/_core/constants/move.dart';
+import 'package:flutter_blog_2/_core/constants/theme.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
