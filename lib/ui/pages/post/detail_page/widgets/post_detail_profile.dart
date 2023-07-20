@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog_2/_core/constants/size.dart';
+import 'package:flutter_blog/_core/constants/size.dart';
 
 class PostDetailProfile extends StatelessWidget {
 

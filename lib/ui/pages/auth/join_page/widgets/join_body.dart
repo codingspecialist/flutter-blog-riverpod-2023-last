@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog_2/_core/constants/move.dart';
-import 'package:flutter_blog_2/_core/constants/size.dart';
-import 'package:flutter_blog_2/ui/pages/auth/join_page/widgets/join_form.dart';
-import 'package:flutter_blog_2/ui/widgets/custom_logo.dart';
-import 'package:flutter_blog_2/ui/widgets/custom_text_button.dart';
+import 'package:flutter_blog/_core/constants/move.dart';
+import 'package:flutter_blog/_core/constants/size.dart';
+import 'package:flutter_blog/ui/pages/auth/join_page/widgets/join_form.dart';
+import 'package:flutter_blog/ui/widgets/custom_logo.dart';
+import 'package:flutter_blog/ui/widgets/custom_text_button.dart';
 
 class JoinBody extends StatelessWidget {
   const JoinBody({Key? key}) : super(key: key);

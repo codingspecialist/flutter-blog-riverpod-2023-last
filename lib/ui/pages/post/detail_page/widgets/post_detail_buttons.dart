@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_blog_2/ui/pages/post/update_page/post_update_page.dart';
+import 'package:flutter_blog/ui/pages/post/update_page/post_update_page.dart';
 
 class PostDetailButtons extends StatelessWidget {
   const PostDetailButtons({Key? key}) : super(key: key);

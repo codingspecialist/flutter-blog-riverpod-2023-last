@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog_2/ui/pages/post/list_page/wiegets/post_list_body.dart';
-import 'package:flutter_blog_2/ui/widgets/custom_navigator.dart';
+import 'package:flutter_blog/ui/pages/post/list_page/wiegets/post_list_body.dart';
+import 'package:flutter_blog/ui/widgets/custom_navigator.dart';
 
 class PostListPage extends StatelessWidget {
   final scaffoldKey = GlobalKey<ScaffoldState>();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog_2/ui/pages/post/write_page/widgets/post_write_form.dart';
+import 'package:flutter_blog/ui/pages/post/write_page/widgets/post_write_form.dart';
 
 class PostWriteBody extends StatelessWidget {
   const PostWriteBody({Key? key}) : super(key: key);

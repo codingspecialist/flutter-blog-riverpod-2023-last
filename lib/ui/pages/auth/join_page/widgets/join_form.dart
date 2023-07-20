@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog_2/_core/constants/size.dart';
-import 'package:flutter_blog_2/_core/utils/validator_util.dart';
-import 'package:flutter_blog_2/ui/widgets/custom_auth_text_form_field.dart';
-import 'package:flutter_blog_2/ui/widgets/custom_elavated_button.dart';
+import 'package:flutter_blog/_core/constants/size.dart';
+import 'package:flutter_blog/_core/utils/validator_util.dart';
+import 'package:flutter_blog/ui/widgets/custom_auth_text_form_field.dart';
+import 'package:flutter_blog/ui/widgets/custom_elavated_button.dart';
 
 class JoinForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
