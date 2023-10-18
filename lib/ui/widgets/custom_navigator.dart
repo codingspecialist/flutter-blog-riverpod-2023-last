@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/_core/constants/move.dart';
 import 'package:flutter_blog/_core/constants/size.dart';
+import 'package:flutter_blog/data/store/session_store.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CustomNavigation extends StatelessWidget {
+class CustomNavigation extends ConsumerWidget {
   final scaffoldKey;
   const CustomNavigation(this.scaffoldKey, {Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       width: getDrawerWidth(context),
       height: double.infinity,
@@ -34,9 +36,10 @@ class CustomNavigation extends StatelessWidget {
               ),
               const Divider(),
               TextButton(
-                onPressed: () {
+                onPressed: () async {
                   scaffoldKey.currentState!.openEndDrawer();
-                  Navigator.popAndPushNamed(context, Move.loginPage);
+
+                  await ref.read(sessionProvider).logout();
                 },
                 child: const Text(
                   "로그아웃",

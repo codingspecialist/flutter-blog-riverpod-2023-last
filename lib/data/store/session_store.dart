@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/_core/constants/http.dart';
 import 'package:flutter_blog/_core/constants/move.dart';
@@ -57,7 +56,17 @@ class SessionStore extends SessionUser {
     }
   }
 
-  Future<void> logout() async {}
+  // JWT는 로그아웃할 때 서버측으로 요청할 필요가 없음.
+  // 서버는 상태를 저장하지 않기 때문이다
+  Future<void> logout() async {
+    this.jwt = null;
+    this.isLogin = false;
+    this.user = null;
+
+    await secureStorage.delete(key: "jwt");
+
+    Navigator.pushNamedAndRemoveUntil(mContext!, "/login", (route) => false);
+  }
 }
 
 // 3. 창고 관리자
