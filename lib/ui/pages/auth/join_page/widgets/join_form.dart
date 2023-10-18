@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/_core/constants/size.dart';
 import 'package:flutter_blog/_core/utils/validator_util.dart';
+import 'package:flutter_blog/data/dto/user_request.dart';
+import 'package:flutter_blog/data/store/session_store.dart';
 import 'package:flutter_blog/ui/widgets/custom_auth_text_form_field.dart';
 import 'package:flutter_blog/ui/widgets/custom_elavated_button.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class JoinForm extends StatelessWidget {
+class JoinForm extends ConsumerWidget {
   final _formKey = GlobalKey<FormState>();
   final _username = TextEditingController();
   final _email = TextEditingController();
@@ -13,7 +16,7 @@ class JoinForm extends StatelessWidget {
   JoinForm({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Form(
       key: _formKey,
       child: Column(
@@ -39,7 +42,17 @@ class JoinForm extends StatelessWidget {
             controller: _password,
           ),
           const SizedBox(height: largeGap),
-          CustomElevatedButton(text: "회원가입", funPageRoute: () {}),
+          CustomElevatedButton(
+              text: "회원가입",
+              funPageRoute: () {
+                if (_formKey.currentState!.validate()) {
+                  JoinReqDTO joinReqDTO = JoinReqDTO(
+                      username: _username.text,
+                      password: _password.text,
+                      email: _email.text);
+                  ref.read(sessionProvider).join(joinReqDTO);
+                }
+              }),
         ],
       ),
     );

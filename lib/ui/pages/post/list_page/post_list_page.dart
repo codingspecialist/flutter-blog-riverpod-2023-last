@@ -14,12 +14,11 @@ class PostListPage extends StatelessWidget {
       key: scaffoldKey,
       drawer: CustomNavigation(scaffoldKey),
       appBar: AppBar(
-        title: const Text("Blog"),
+        title: Text("Blog"),
       ),
       body: RefreshIndicator(
         key: refreshKey,
-        onRefresh: () async {
-        },
+        onRefresh: () async {},
         child: PostListBody(),
       ),
     );
