@@ -31,7 +31,7 @@ class PostRepository {
   Future<ResponseDTO> fetchPost(String jwt, PostSaveReqDTO dto) async {
     try {
       // 1. 통신
-      final response = await dio.get("/post",
+      final response = await dio.post("/post",
           data: dto.toJson(),
           options: Options(headers: {"Authorization": "${jwt}"}));
 
