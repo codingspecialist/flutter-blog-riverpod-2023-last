@@ -57,7 +57,16 @@ class SessionStore extends SessionUser {
     }
   }
 
-  Future<void> logout() async {}
+  // JWT는 로그아웃할 때 서버측으로 요청할 필요가 없음.
+  Future<void> logout() async {
+    this.jwt = null;
+    this.isLogin = false;
+    this.user = null;
+
+    await secureStorage.delete(key: "jwt");
+
+    Navigator.pushNamedAndRemoveUntil(mContext!, "/login", (route) => false);
+  }
 }
 
 // 3. 창고 관리자
