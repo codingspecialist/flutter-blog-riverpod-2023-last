@@ -29,10 +29,8 @@ class PostDetailViewModel extends StateNotifier<PostDetailModel?> {
 }
 
 // 창고 관리자
-final postDetailProvider =
-    StateNotifierProvider.autoDispose<PostDetailViewModel, PostDetailModel?>(
-        (ref) {
-  Logger().d("나실행됨? postDetailProvider");
-  int postId = ref.read(paramProvider).postDetailId!;
+final postDetailProvider = StateNotifierProvider.family
+    .autoDispose<PostDetailViewModel, PostDetailModel?, int>((ref, postId) {
+  Logger().d("나실행됨? postDetailProvider $postId");
   return PostDetailViewModel(null, ref)..notifyInit(postId);
 });

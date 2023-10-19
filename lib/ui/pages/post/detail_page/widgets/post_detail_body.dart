@@ -9,12 +9,13 @@ import 'package:flutter_blog/ui/pages/post/detail_page/widgets/post_detail_title
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PostDetailBody extends ConsumerWidget {
-  const PostDetailBody({Key? key}) : super(key: key);
+  int postId;
+  PostDetailBody(this.postId, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // TODO 3: watch? read?
-    PostDetailModel? model = ref.watch(postDetailProvider);
+    PostDetailModel? model = ref.watch(postDetailProvider(postId));
 
     if (model == null) {
       return CircularProgressIndicator();
