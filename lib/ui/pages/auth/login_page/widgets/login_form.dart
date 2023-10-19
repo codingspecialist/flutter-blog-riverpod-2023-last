@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog/_core/constants/move.dart';
 import 'package:flutter_blog/_core/constants/size.dart';
 import 'package:flutter_blog/_core/utils/validator_util.dart';
 import 'package:flutter_blog/data/dto/user_request.dart';
@@ -7,6 +6,7 @@ import 'package:flutter_blog/data/store/session_store.dart';
 import 'package:flutter_blog/ui/widgets/custom_auth_text_form_field.dart';
 import 'package:flutter_blog/ui/widgets/custom_elavated_button.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:logger/logger.dart';
 
 class LoginForm extends ConsumerWidget {
   final _formKey = GlobalKey<FormState>();
@@ -38,6 +38,8 @@ class LoginForm extends ConsumerWidget {
           CustomElevatedButton(
               text: "로그인",
               funPageRoute: () {
+                Logger().d("유저네임: ${_username.text}");
+                Logger().d("패스워드: ${_password.text}");
                 if (_formKey.currentState!.validate()) {
                   LoginReqDTO loginReqDTO = LoginReqDTO(
                       username: _username.text, password: _password.text);

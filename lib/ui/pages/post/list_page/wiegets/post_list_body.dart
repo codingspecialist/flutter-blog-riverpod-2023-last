@@ -18,6 +18,7 @@ class PostListBody extends ConsumerWidget {
     }
 
     return ListView.separated(
+      //구분선주는거
       itemCount: posts.length,
       itemBuilder: (context, index) {
         return InkWell(

@@ -1,9 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_blog/_core/constants/http.dart';
+import 'package:flutter_blog/data/dto/post_repuest.dart';
 import 'package:flutter_blog/data/dto/response_dto.dart';
-import 'package:flutter_blog/data/dto/user_request.dart';
 import 'package:flutter_blog/data/model/post.dart';
-import 'package:flutter_blog/data/model/user.dart';
 
 // V -> P(전역프로바이더, 뷰모델) -> R
 class PostRepository {
@@ -28,4 +27,6 @@ class PostRepository {
       return ResponseDTO(-1, "게시글 목록 불러오기 실패", null);
     }
   }
+
+  fetchPost(String jet, PostSaveReqDTO dto) async {}
 }
