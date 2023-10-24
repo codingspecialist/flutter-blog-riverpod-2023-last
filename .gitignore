@@ -1,5 +1,5 @@
 # Miscellaneous
-firebase_options.dart
+lib/firebase_options.dart
 *.class
 *.log
 *.pyc
