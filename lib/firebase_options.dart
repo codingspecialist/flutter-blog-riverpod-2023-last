@@ -16,14 +16,9 @@ import 'package:flutter/foundation.dart'
 /// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
-    if (kIsWeb) {
-      return web;
-    }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
-      case TargetPlatform.iOS:
-        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -46,29 +41,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCG9j4KbUp-CBGmWYo7SxFpocCaxjSDQnE',
-    appId: '1:985005330847:web:6751bc2cbfe2561a616daa',
-    messagingSenderId: '985005330847',
-    projectId: 'riverpod-chat-5253c',
-    authDomain: 'riverpod-chat-5253c.firebaseapp.com',
-    storageBucket: 'riverpod-chat-5253c.appspot.com',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAJNge_7Ur4IeicdMmOqtM_iXAvtWZUHWk',
+    apiKey: '변경하기',
     appId: '1:985005330847:android:6e55ada8a96adfd7616daa',
     messagingSenderId: '985005330847',
     projectId: 'riverpod-chat-5253c',
     storageBucket: 'riverpod-chat-5253c.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDO5GMCBYsjYe7MmgdEaBIn1r5w3kUrDTU',
-    appId: '1:985005330847:ios:113f0281fd28c689616daa',
-    messagingSenderId: '985005330847',
-    projectId: 'riverpod-chat-5253c',
-    storageBucket: 'riverpod-chat-5253c.appspot.com',
-    iosBundleId: 'com.example.flutterBlog2',
   );
 }
