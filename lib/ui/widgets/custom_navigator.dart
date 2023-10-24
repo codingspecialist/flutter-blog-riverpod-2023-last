@@ -34,6 +34,20 @@ class CustomNavigation extends ConsumerWidget {
                   ),
                 ),
               ),
+              TextButton(
+                onPressed: () {
+                  scaffoldKey.currentState!.openEndDrawer();
+                  Navigator.pushNamed(context, Move.chatPage);
+                },
+                child: const Text(
+                  "채팅하기",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black54,
+                  ),
+                ),
+              ),
               const Divider(),
               TextButton(
                 onPressed: () {

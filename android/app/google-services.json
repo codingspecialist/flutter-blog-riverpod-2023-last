@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "985005330847",
+    "project_id": "riverpod-chat-5253c",
+    "storage_bucket": "riverpod-chat-5253c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985005330847:android:6e55ada8a96adfd7616daa",
+        "android_client_info": {
+          "package_name": "com.example.flutter_blog_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJNge_7Ur4IeicdMmOqtM_iXAvtWZUHWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

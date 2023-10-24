@@ -1,13 +1,22 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/_core/constants/move.dart';
 import 'package:flutter_blog/_core/constants/size.dart';
 import 'package:flutter_blog/_core/constants/theme.dart';
+import 'package:flutter_blog/firebase_options.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // TODO 1: Widget이 아닌 곳에서 현재 화면의 context에 접근해주는 객체
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(ProviderScope(child: const MyApp()));
 }
 
